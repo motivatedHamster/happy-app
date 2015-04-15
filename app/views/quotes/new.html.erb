@@ -1,11 +1,3 @@
 <h1>Add a quote</h1>
 
-<%= form_for @quote do |q| %>
-  <div>
-    <%= q.label :body %>
-    <%= q.text_area :body, size: '60x6' %>
-  </div>
-  <div>
-    <%= q.submit %>
-  </div>
-<% end %>
+<%= render "form" %>
