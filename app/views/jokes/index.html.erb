@@ -1,5 +1,13 @@
 <h1>Jokes Index Page</h1>
-
+<%= link_to "Add a Joke", new_joke_path %>
 <% @jokes.each do |joke| %>
-  <p><%= joke.body %></p>
+  <table>
+    <tr>
+      <td><%= joke.body %></td>
+      <td><%= link_to "Edit", edit_joke_path(joke) %></td>
+      <td><%= link_to "Delete", joke, method: :delete %></td>
+    </tr>
+  </table>
 <% end %>
+
+<%= render "home/nav" %>

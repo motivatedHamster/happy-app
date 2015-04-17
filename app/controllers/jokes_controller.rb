@@ -4,6 +4,12 @@ class JokesController < ApplicationController
     redirect_to jokes_path
   end
   
+  def destroy
+    @joke = Joke.find(params[:id])
+    @joke.destroy
+    redirect_to jokes_path
+  end
+  
   def edit
     @joke = Joke.find(params[:id])
   end

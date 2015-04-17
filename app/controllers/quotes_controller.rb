@@ -3,6 +3,12 @@ class QuotesController < ApplicationController
     Quote.create(quote_params)
     redirect_to quotes_path
   end
+
+  def destroy
+    @quote = Quote.find(params[:id])
+    @quote.destroy
+    redirect_to quotes_path
+  end
   
   def edit
     @quote = Quote.find(params[:id])
