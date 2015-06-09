@@ -14,10 +14,14 @@ class JokesController < ApplicationController
     @joke = Joke.find(params[:id])
   end
   
+  # GET /jokes
+  # GET /jokes.json
   def index
     @jokes = Joke.all
+    @joke = Joke.new
   end
   
+  # GET /resources/new
   def new
     @joke = Joke.new
   end
