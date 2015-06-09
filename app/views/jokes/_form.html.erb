@@ -1,4 +1,4 @@
-<%= form_for @joke do |j| %>
+<%= form_for(@joke, remote: true) do |j| %>
   <div>
     <%= j.label :body %>
     <%= j.text_area :body, size: '60x6' %>
